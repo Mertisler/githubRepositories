@@ -2,10 +2,11 @@ package com.loc.githubprejects.usecase
 
 import com.loc.githubprejects.model.RepoItem
 import com.loc.githubprejects.repository.GithubRepository
+import com.loc.githubprejects.repository.GithubRepositoryImpl
 import javax.inject.Inject
 
 class SearchFilteredReposUseCase @Inject constructor(
-    private val githubRepository: GithubRepository
+    private val githubRepository: GithubRepositoryImpl
 ) {
     suspend operator fun invoke(query: String): List<RepoItem> {
 
